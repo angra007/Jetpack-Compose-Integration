@@ -15,23 +15,33 @@ class NewFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // Option 3
+        val composeView = view?.findViewById<ComposeView>(R.id.compose_view)
+        composeView?.apply {
+            setContent {
+                HelloFromFragment()
+            }
+        }
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return ComposeView(requireContext()).apply {
+//        Option 2:
+//        return ComposeView(requireContext()).apply {
+//
+//            setViewCompositionStrategy(
+//                ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed
+//            )
+//
+//            setContent {
+//                HelloFromFragment()
+//            }
+//        }
 
-            setViewCompositionStrategy(
-                ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed
-            )
-
-            setContent {
-                HelloFromFragment()
-            }
-        }
+        return inflater.inflate(R.layout.fragment_new, container, false);
     }
 
     companion object {
