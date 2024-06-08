@@ -9,9 +9,18 @@ import androidx.compose.runtime.Composable
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            HelloWorld()
-        }
+
+//        Option 1:
+//        setContent {
+//            HelloWorld()
+//        }
+
+//        Option 2:
+//        setContentView(R.layout.activity_main)
+//        val newFragment = NewFragment.newInstance()
+//        supportFragmentManager.beginTransaction()
+//            .replace(R.id.fragmentContainerView, newFragment)
+//            .commit()
     }
 }
 
@@ -20,3 +29,6 @@ class MainActivity : AppCompatActivity() {
 fun HelloWorld() {
     Text("Hello World!!")
 }
+
+
+
