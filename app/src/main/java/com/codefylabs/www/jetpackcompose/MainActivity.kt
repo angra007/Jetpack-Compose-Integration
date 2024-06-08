@@ -10,17 +10,19 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        setContentView(R.layout.activity_main)
+
 //        Option 1:
 //        setContent {
 //            HelloWorld()
 //        }
 
 //        Option 2:
-        setContentView(R.layout.activity_main)
-        val newFragment = NewFragment.newInstance()
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.fragmentContainerView, newFragment)
-            .commit()
+//        setContentView(R.layout.activity_main)
+//        val newFragment = NewFragment.newInstance()
+//        supportFragmentManager.beginTransaction()
+//            .replace(R.id.fragmentContainerView, newFragment)
+//            .commit()
     }
 }
 
