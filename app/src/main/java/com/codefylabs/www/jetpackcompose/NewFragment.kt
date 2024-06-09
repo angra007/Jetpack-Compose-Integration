@@ -15,14 +15,6 @@ class NewFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        // Option 3
-        val composeView = view?.findViewById<ComposeView>(R.id.compose_view)
-        composeView?.apply {
-            setContent {
-                HelloFromFragment()
-            }
-        }
     }
 
     override fun onCreateView(
@@ -42,6 +34,17 @@ class NewFragment : Fragment() {
 //        }
 
         return inflater.inflate(R.layout.fragment_new, container, false);
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        // Option 3
+        val composeView = view?.findViewById<ComposeView>(R.id.compose_view)
+        composeView?.apply {
+            setContent {
+                HelloFromFragment()
+            }
+        }
     }
 
     companion object {

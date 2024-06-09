@@ -18,11 +18,11 @@ class MainActivity : AppCompatActivity() {
 //        }
 
 //        Option 2:
-//        setContentView(R.layout.activity_main)
-//        val newFragment = NewFragment.newInstance()
-//        supportFragmentManager.beginTransaction()
-//            .replace(R.id.fragmentContainerView, newFragment)
-//            .commit()
+        setContentView(R.layout.activity_main)
+        val newFragment = NewFragment.newInstance()
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragmentContainerView, newFragment)
+            .commit()
     }
 }
 
