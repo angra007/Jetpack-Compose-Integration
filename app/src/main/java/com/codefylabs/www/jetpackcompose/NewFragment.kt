@@ -38,13 +38,13 @@ class NewFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        // Option 3
-        val composeView = view?.findViewById<ComposeView>(R.id.compose_view)
-        composeView?.apply {
-            setContent {
-                HelloFromFragment()
-            }
-        }
+//        // Option 3
+//        val composeView = view?.findViewById<ComposeView>(R.id.compose_view)
+//        composeView?.apply {
+//            setContent {
+//                HelloFromFragment()
+//            }
+//        }
     }
 
     companion object {
